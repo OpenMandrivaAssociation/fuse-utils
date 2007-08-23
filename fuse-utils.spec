@@ -1,6 +1,6 @@
 %define name    fuse-utils
-%define version 0.6.1
-%define release %mkrel 5
+%define version 0.8.0.1
+%define release %mkrel 1
 
 Name: %{name}
 Summary: The Fuse utilities are a few tools to deal with ZX Spectrum emulator files
@@ -9,7 +9,7 @@ Release: %{release}
 License: GPL
 URL: http://www.srcf.ucam.org/~pak21/spectrum/fuse.html
 Source: http://www.srcf.ucam.org/~pak21/spectrum/%{name}-%{version}.tar.gz
-Patch0: fuse-utils-dontuse-gcrypt.patch
+Patch1: fuse-utils-fix-build.diff
 Group: Emulators
 BuildRequires: libz-devel libspectrum-devel libgcrypt-devel libglib-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
@@ -29,7 +29,7 @@ The available utilities are:
 
 %prep
 %setup -q
-%patch0 -p1
+%patch1 -p0
 
 %build
 %configure --without-gcrypt
