@@ -12,6 +12,7 @@ Source: http://www.srcf.ucam.org/~pak21/spectrum/%{name}-%{version}.tar.gz
 Patch1: fuse-utils-fix-build.diff
 Group: Emulators
 BuildRequires: libz-devel libspectrum-devel libgcrypt-devel glib2-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
 %description
 The available utilities are:
