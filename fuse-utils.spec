@@ -1,6 +1,6 @@
 %define name    fuse-utils
 %define version 0.8.0.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 Name: %{name}
 Summary: The Fuse utilities are a few tools to deal with ZX Spectrum emulator files
