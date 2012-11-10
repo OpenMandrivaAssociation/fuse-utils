@@ -1,0 +1,22 @@
+--- ./configure.tv	2007-08-23 16:22:18.000000000 +0200
++++ ./configure	2007-08-23 16:22:40.000000000 +0200
+@@ -19699,7 +19699,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+   cat >>confdefs.h <<_ACEOF
+ #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
+ _ACEOF
+- LIBSPEC_LIBS="$LIBSPEC_LIBS -lspectrum"
++ LIBSPEC_LIBS="$LIBSPEC_LIBS -lspectrum -lglib-2.0"
+ else
+   { { echo "$as_me:$LINENO: error: Sorry - I need libspectrum to be available" >&5
+ echo "$as_me: error: Sorry - I need libspectrum to be available" >&2;}
+--- ./configure.in.tv	2007-08-23 16:22:23.000000000 +0200
++++ ./configure.in	2007-08-23 16:22:37.000000000 +0200
+@@ -59,7 +59,7 @@ LIBSPEC_CFLAGS=-I$withval/include; LIBSP
+ LIBSPEC_CFLAGS=""; LIBSPEC_LIBS="")
+ ac_save_CPPFLAGS="$CPPFLAGS"
+ CPPFLAGS="$CFLAGS $LIBSPEC_CFLAGS $GLIB_CFLAGS"
+-AC_CHECK_HEADERS(libspectrum.h,LIBSPEC_LIBS="$LIBSPEC_LIBS -lspectrum",
++AC_CHECK_HEADERS(libspectrum.h,LIBSPEC_LIBS="$LIBSPEC_LIBS -lspectrum -lglib-2.0",
+ 	         AC_MSG_ERROR(Sorry - I need libspectrum to be available))
+ CPPFLAGS="$ac_save_CPPFLAGS"
+ AC_SUBST(LIBSPEC_CFLAGS)
