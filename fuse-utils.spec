@@ -7,7 +7,7 @@ Summary: The Fuse utilities are a few tools to deal with ZX Spectrum emulator fi
 Version: %{version}
 Release: %{release}
 License: GPL
-URL: http://www.srcf.ucam.org/~pak21/spectrum/fuse.html
+URL: https://www.srcf.ucam.org/~pak21/spectrum/fuse.html
 Source: http://www.srcf.ucam.org/~pak21/spectrum/%{name}-%{version}.tar.gz
 Patch1: fuse-utils-fix-build.diff
 Group: Emulators
