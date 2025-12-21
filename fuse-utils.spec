@@ -11,6 +11,11 @@ URL: https://www.srcf.ucam.org/~pak21/spectrum/fuse.html
 Source: http://www.srcf.ucam.org/~pak21/spectrum/%{name}-%{version}.tar.gz
 Patch1: fuse-utils-fix-build.diff
 Group: Emulators
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: libz-devel libspectrum-devel libgcrypt-devel glib2-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
